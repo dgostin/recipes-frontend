@@ -143,7 +143,9 @@ const MultiSelectWithCheckboxes = ({
               className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
             />
             <label
-              htmlFor={`checkbox-${option.id}`}
+              htmlFor={`checkbox-${option.label
+                .toLowerCase()
+                .replace(/\s+/g, "-")}-${option.id}`}
               className="ml-1 text-xs text-gray-700"
             >
               {option.label}
