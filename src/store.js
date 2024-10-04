@@ -23,4 +23,6 @@ export const useAppStore = create((set) => ({
   setErrorMessage: (msg) => set(() => ({ errorMessage: msg })),
   timer: null,
   setTimer: (timer) => set(() => ({ timer: timer })),
+  loading: false,
+  setLoading: (loading) => set(() => ({ loading: loading })),
 }));

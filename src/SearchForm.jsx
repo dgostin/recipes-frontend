@@ -44,6 +44,7 @@ const SearchForm = ({ handleSubmit }) => {
   const selectedMealTypes = useRecipeStore((state) => state.selectedMealTypes);
   const setFormSubmitted = useAppStore((state) => state.setFormSubmitted);
   const errorMessage = useAppStore((state) => state.errorMessage);
+  const loading = useAppStore((state) => state.loading);
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 mx-auto">
@@ -93,7 +94,7 @@ const SearchForm = ({ handleSubmit }) => {
 
       <button
         type="submit"
-        className="w-full p-2 bg-blue-500 text-white rounded mt-7"
+        className="w-full p-2 text-white rounded mt-7 bg-blue-500"
       >
         Search
       </button>
